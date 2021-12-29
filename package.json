@@ -1,11 +1,13 @@
 {
   "name": "icebolt",
-  "version": "0.0.1-stub",
+  "version": "0.0.2-development",
   "description": "A lightweight alternative for creating webservers.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node ."
   },
   "author": "liquiddevelopmentnet",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/liquiddevelopmentnet/icebolt"
 }
