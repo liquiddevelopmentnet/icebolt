@@ -1,0 +1,11 @@
+{
+  "name": "icebolt",
+  "version": "0.0.1-stub",
+  "description": "A lightweight alternative for creating webservers.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "liquiddevelopmentnet",
+  "license": "MIT"
+}

@@ -1,0 +1,1 @@
+console.log('method stub for npmjs')
