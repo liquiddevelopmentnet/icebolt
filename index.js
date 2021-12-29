@@ -8,7 +8,7 @@ export default class Icebolt {
      * @param {*} callback 
      * @param {*} options 
      */
-    constructor (port, callback, options = { strictMode: false }) {
+    constructor (port = 3000, callback, options = { strictMode: false }) {
         this._options = options;
 
         this._httpServer = http.createServer((req, res) => this.handleRequest(req, res))
@@ -28,13 +28,15 @@ export default class Icebolt {
      */
     handleRequest (req, res) {
 
+        /* Inject some methods into the Response object */
+
         res.send = (payload) => {
             res.write(payload)
             res.end()
         }
 
         const fu = this._nodeMap.get(req.url)
-        if(fu[0])
+        if(fu && (fu[0] && req.method == fu[1]))
             fu[0](req, res)
         else {
             res.writeHead(200, {'Content-Type': 'text/html'});
